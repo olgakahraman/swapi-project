@@ -15,11 +15,17 @@
   </head>
   <body>
     <div class="container">
-      <div class="buttons" id="buttons">
-        <button class="people" id="people">People</button>
-        <button class="planets" id="planets">Planets</button>
-        <button class="films" id="films">Films</button>
-      </div>
+<ul class="nav nav-pills nav-fill gap-2 p-1 small bg-secondary rounded-5 shadow-sm" id="pillNav2" role="tablist" style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-dark); --bs-nav-pills-link-active-bg: var(--bs-warning);">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active rounded-5" id="people-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true">People</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link rounded-5" id="planets-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Planets</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link rounded-5" id="starships-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Starships</button>
+  </li>
+</ul>
 
       <div class="results" id="results"></div>
     </div>
