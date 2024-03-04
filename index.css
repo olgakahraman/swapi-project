@@ -4,8 +4,29 @@
 }
 
 body{
-    background-image: url("/images/background.jpg");
+    background-image: url("/images/night.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 
+}
+.container{
+    margin: 30px auto;
+    padding: 30px;
+
+}
+.nav-link:hover{
+    color:#f7c133;
+}
+.card:hover{
+    background:#f7c133 ;
+}
+
+.results{
+    margin: 30px auto;
+    padding: 30px;
+
+}
+.card{
+    border-radius: 30px;
+    transition:150ms all ease-in-out;
 }
