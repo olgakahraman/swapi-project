@@ -1,58 +1,47 @@
-
-
-body{
-    background-image: url("/images/day.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-.container{
-    margin:30px auto;
-    display:block;
- 
-   
-
-}
-.nav-link:hover{
-    color:#f7c133;
-}
-.card:hover{
-    background:#f7c133 ;
+body {
+  background-image: url("/images/day2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 600ms ease-in-out;
 }
 
-.results{
-    margin: 30px auto;
-    padding: 30px;
-
+.container {
+  margin: 30px auto;
+  display: block;
 }
-.card{
-    border-radius: 30px;
-    transition:150ms all ease-in-out;
+.nav-link:hover {
+  color: #f7c133;
+}
+.card:hover {
+  background: #f7c133;
 }
 
- /* toggle button for cjange day-night theme */
+.results {
+  margin: 30px auto;
+  padding: 30px;
+}
+.card {
+  border-radius: 30px;
+  transition: 150ms all ease-in-out;
+}
+
+/* toggle button for cjange day-night theme */
 .day-night-btn {
- 
   display: flex;
   justify-content: center;
-  margin-top:30px;
-
- 
-
-
- 
+  margin-top: 30px;
 }
 
 .toggle-text {
   padding-bottom: 7px;
   font-size: 18px;
-  color: white;
+  color: indigo;
 }
 
 .toggle-btn {
   height: 30px;
   width: 50px;
-  background-color: purple;
+  background-color: indigo;
   border-radius: 30px;
   padding: 5px;
   margin: 0 10px;
@@ -67,9 +56,16 @@ body{
 }
 .toggle-btn.toggled > .inner-circle {
   transform: translateX(20px);
-  background-color: #333;
+  background-color: grey;
 }
 
 .unselected {
   opacity: 0.25;
+}
+/* dark theme */
+body.dark {
+  background-image: url("/images/night.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 600ms ease-in-out;
 }
