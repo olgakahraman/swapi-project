@@ -13,7 +13,7 @@ function displayResults(data, value) {
   if (value === "people") {
     data.results.forEach((item) => {
       output += `
-      <div class="card p-3 m-3" >
+      <div class="card p-3 m-3 " >
       <h4 class = "card-title text-center">${item.name}</h4>
       </div>
       `;
@@ -41,6 +41,22 @@ function displayResults(data, value) {
   results.innerHTML = output;
 }
 
+
+toggleBtn.addEventListener("click", () => {
+  let body = document.querySelector("body");
+
+  if (toggleBtn.classList.contains("toggled")) {
+    toggleBtn.classList.remove("toggled");
+    body.classList.remove("dark");
+    lightenText.classList.remove("unselected");
+    darkenText.classList.add("unselected");
+  } else {
+    toggleBtn.classList.add("toggled");
+    body.classList.add("dark");
+    lightenText.classList.add("unselected");
+    darkenText.classList.remove("unselected");
+  }
+});
 
 // added Event Listener to buttons in navbar
 document.querySelector("#pillNav2").addEventListener("click", (e) => {
