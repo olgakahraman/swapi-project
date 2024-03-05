@@ -1,17 +1,16 @@
-*{
-    padding:0;
-    margin:0;
-}
+
 
 body{
-    background-image: url("/images/night.jpg");
+    background-image: url("/images/day.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 
 }
 .container{
-    margin: 30px auto;
-    padding: 30px;
+    margin:30px auto;
+    display:block;
+ 
+   
 
 }
 .nav-link:hover{
@@ -29,4 +28,48 @@ body{
 .card{
     border-radius: 30px;
     transition:150ms all ease-in-out;
+}
+
+ /* toggle button for cjange day-night theme */
+.day-night-btn {
+ 
+  display: flex;
+  justify-content: center;
+  margin-top:30px;
+
+ 
+
+
+ 
+}
+
+.toggle-text {
+  padding-bottom: 7px;
+  font-size: 18px;
+  color: white;
+}
+
+.toggle-btn {
+  height: 30px;
+  width: 50px;
+  background-color: purple;
+  border-radius: 30px;
+  padding: 5px;
+  margin: 0 10px;
+}
+
+.inner-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ecfdf5;
+  transition: all 250ms ease-in-out;
+}
+.toggle-btn.toggled > .inner-circle {
+  transform: translateX(20px);
+  background-color: #333;
+}
+
+.unselected {
+  opacity: 0.25;
 }
