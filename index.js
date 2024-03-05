@@ -6,41 +6,44 @@ async function asyncFetch(value) {
   displayResults(data, value);
 }
 
-
 function displayResults(data, value) {
-  let output = "";
+  let output = `<div class="row">`;
   console.log(data);
   if (value === "people") {
     data.results.forEach((item) => {
       output += `
+      <div class="col-4">
       <div class="card p-3 m-3 " >
       <h4 class = "card-title text-center">${item.name}</h4>
-      </div>
+      </div></div>
       `;
     });
   }
   if (value === "planets") {
     data.results.forEach((item) => {
       output += `
+      <div class="col-4">
       <div class="card p-3 m-3" >
       <h4 class = "card-title text-center">${item.name}</h4>
-      </div>
+      </div></div>
       `;
     });
   }
   if (value === "starships") {
     data.results.forEach((item) => {
       output += `
+      <div class="col-4">
       <div class="card p-3 m-3">
       <h4 class = "card-title text-center">${item.name}</h4>
-      </div>
+      </div></div>
+
+
       `;
     });
   }
-
+  output = output + `</div>`;
   results.innerHTML = output;
 }
-
 
 toggleBtn.addEventListener("click", () => {
   let body = document.querySelector("body");
