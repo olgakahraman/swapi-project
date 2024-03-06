@@ -14,7 +14,7 @@ function displayResults(data, value) {
       output += `
       <div class="col-4">
       <div class="card p-3 m-3 " >
-      <h4 class = "card-title text-center">${item.name}</h4>
+      <h6 class = "card-title text-center">${item.name}</h6>
       </div></div>
       `;
     });
@@ -24,7 +24,7 @@ function displayResults(data, value) {
       output += `
       <div class="col-4">
       <div class="card p-3 m-3" >
-      <h4 class = "card-title text-center">${item.name}</h4>
+      <h6 class = "card-title text-center">${item.name}</h6>
       </div></div>
       `;
     });
@@ -32,9 +32,9 @@ function displayResults(data, value) {
   if (value === "starships") {
     data.results.forEach((item) => {
       output += `
-      <div class="col-4">
+      <div class="col-4  ">
       <div class="card p-3 m-3">
-      <h4 class = "card-title text-center">${item.name}</h4>
+      <h6 class = "card-title text-center">${item.name}</h6>
       </div></div>
 
 

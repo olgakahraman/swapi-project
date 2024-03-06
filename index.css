@@ -3,6 +3,22 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   transition: all 600ms ease-in-out;
+  background-color: mediumturquoise;
+}
+.first-flex{
+  display:flex;
+  justify-content: space-evenly;
+  
+}
+.star-wars-logo{
+  margin-top: 25px;
+}
+.logo-img{
+  height:40px;
+}
+.logo-img:hover{
+  cursor:pointer;
+
 }
 
 .container {
@@ -23,6 +39,10 @@ body {
 .card {
   border-radius: 30px;
   transition: 150ms all ease-in-out;
+  
+}
+.card-title{
+  margin-bottom: 0;
 }
 
 /* toggle button for cjange day-night theme */
@@ -68,4 +88,5 @@ body.dark {
   background-repeat: no-repeat;
   background-size: cover;
   transition: all 600ms ease-in-out;
+  background-color: indigo;
 }
