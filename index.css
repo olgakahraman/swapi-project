@@ -3,22 +3,20 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   transition: all 600ms ease-in-out;
-  background-color: mediumturquoise;
+  background-color: aqua;
 }
-.first-flex{
-  display:flex;
+.first-flex {
+  display: flex;
   justify-content: space-evenly;
-  
 }
-.star-wars-logo{
+.star-wars-logo {
   margin-top: 25px;
 }
-.logo-img{
-  height:40px;
+.logo-img {
+  height: 40px;
 }
-.logo-img:hover{
-  cursor:pointer;
-
+.logo-img:hover {
+  cursor: pointer;
 }
 
 .container {
@@ -39,9 +37,8 @@ body {
 .card {
   border-radius: 30px;
   transition: 150ms all ease-in-out;
-  
 }
-.card-title{
+.card-title {
   margin-bottom: 0;
 }
 
@@ -89,4 +86,28 @@ body.dark {
   background-size: cover;
   transition: all 600ms ease-in-out;
   background-color: indigo;
+  color: white;
+}
+/* footer */
+footer {
+  margin: 40px auto;
+  color:indigo;
+  text-align: center;
+  background-color: aqua;
+}
+
+footer a {
+  text-decoration: none;
+  color: indigo;
+  transition: all 200ms ease-in-out;
+}
+footer a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.dark footer {
+  color: #ecfdf5;
+}
+.dark footer a {
+  color: violet;
 }

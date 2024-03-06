@@ -40,7 +40,9 @@ function displayResults(data, value) {
 
       `;
     });
+
   }
+
   output = output + `</div>`;
   results.innerHTML = output;
 }
