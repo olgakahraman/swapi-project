@@ -26,18 +26,20 @@ body {
 .nav-link:hover {
   color: #f7c133;
 }
-.card:hover {
-  background: #f7c133;
-}
 
+/* results */
 .results {
-  margin: 30px auto;
+  margin: 0 auto;
   padding: 30px;
 }
 .card {
   border-radius: 30px;
   transition: 150ms all ease-in-out;
 }
+.card:hover {
+  background: #f7c133;
+}
+
 .card-title {
   margin-bottom: 0;
 }
@@ -90,10 +92,10 @@ body.dark {
 }
 /* footer */
 footer {
-  margin: 40px auto;
+  margin: 30px auto;
   color:indigo;
   text-align: center;
-  background-color: aqua;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 footer a {
@@ -107,7 +109,9 @@ footer a:hover {
 }
 .dark footer {
   color: #ecfdf5;
+  background:none;
 }
 .dark footer a {
   color: violet;
 }
+
