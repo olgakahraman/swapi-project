@@ -42,7 +42,7 @@ function displayResults(data, value) {
   let header = document.querySelector("#header");
   console.log(data);
   if (value === "people") {
-   header = `<h1 class="text-center" id="#header"><i class="fa-solid fa-people-group"></i> ${value}</h1>`;
+   header = `<h1 class="text-center" id="#header"><i class="fa-solid fa-people-group rotating"></i> ${value}</h1>`;
     data.results.forEach((item) => {
       output += `
       
@@ -54,7 +54,7 @@ function displayResults(data, value) {
     });
   }
   if (value === "planets") {
-     header = `<h1 class="text-center" id="#header"><i class="fa-solid fa-earth-americas"></i> ${value}</h1>`;
+     header = `<h1 class="text-center" id="#header"><i class="fa-solid fa-earth-americas rotating"></i> ${value}</h1>`;
     data.results.forEach((item) => {
       output += `
       <div class="col-4" id="cardElement">
@@ -67,7 +67,7 @@ function displayResults(data, value) {
     });
   }
   if (value === "starships") {
-     header = `<h1 class="text-center" id="#header"><i class="fa-solid fa-shuttle-space"></i> ${value}</h1>`;
+     header = `<h1 class="text-center" id="#header"><i class="fa-solid fa-shuttle-space rotating"></i> ${value}</h1>`;
     data.results.forEach((item) => {
       output += `
       <div class="col-4" id="cardElement">

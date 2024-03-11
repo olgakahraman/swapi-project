@@ -126,3 +126,18 @@ footer a:hover {
 #cardElement:hover{
 cursor:pointer;
 }
+
+/* rotating animation for header icons */
+@keyframes rotating {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+.rotating {
+    animation: rotating 10s linear infinite;
+}
