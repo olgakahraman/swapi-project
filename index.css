@@ -2,8 +2,9 @@ body {
   background-image: url("/images/day2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  transition: all 600ms ease-in-out;
+  transition: all 150ms ease-in-out;
   background-color: aqua;
+  font-family: "Montserrat", sans-serif;
 }
 .first-flex {
   display: flex;
@@ -31,6 +32,9 @@ body {
 .results {
   margin: 0 auto;
   padding: 30px;
+}
+.results h1 {
+  color: indigo;
 }
 .card {
   border-radius: 30px;
@@ -86,14 +90,14 @@ body.dark {
   background-image: url("/images/night.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  transition: all 600ms ease-in-out;
+  transition: all 150ms ease-in-out;
   background-color: indigo;
   color: white;
 }
 /* footer */
 footer {
   margin: 30px auto;
-  color:indigo;
+  color: indigo;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.5);
 }
@@ -109,9 +113,11 @@ footer a:hover {
 }
 .dark footer {
   color: #ecfdf5;
-  background:none;
+  background: none;
 }
 .dark footer a {
   color: violet;
 }
-
+.dark .results h1 {
+  color: #ecfdf5;
+}

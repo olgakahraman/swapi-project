@@ -71,6 +71,8 @@ function displayResults(data, value) {
   output = output + `</div>`;
   results.innerHTML = output;
 }
+
+
 const enableDarkMode = () => {
   document.body.classList.add("dark");
   localStorage.setItem("darkMode", "enabled");
@@ -83,19 +85,18 @@ const disableDarkMode = () => {
 
 if (darkMode === "enabled") {
   enableDarkMode();
-
+  toggleBtn.classList.add("toggled");
 }
 
 toggleBtn.addEventListener("click", (event) => {
   event.preventDefault();
   let body = document.querySelector("body");
-
   darkMode = localStorage.getItem("darkMode");
 
   if (toggleBtn.classList.contains("toggled")) {
     disableDarkMode();
+    
     toggleBtn.classList.remove("toggled");
-
     body.classList.remove("dark");
 
     localStorage.setItem("darkMode", null);
