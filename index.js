@@ -11,7 +11,7 @@ fetch(filmRequest)
   .then((data) => {
     let output = `<div class="row">`;
     let films = document.querySelector("#films");
-    
+
     console.log(data);
     data.result.forEach((item) => {
       output += `
@@ -25,7 +25,7 @@ fetch(filmRequest)
       </div></div>
       `;
     });
-    output =  output + `</div>`;
+    output = output + `</div>`;
     films.innerHTML = output;
   });
 
@@ -42,19 +42,19 @@ function displayResults(data, value) {
   let header = document.querySelector("#header");
   console.log(data);
   if (value === "people") {
-   header = `<h1 class="text-center" id="#header"><i class="fa-solid fa-people-group rotating"></i> ${value}</h1>`;
+    header = `<h1 class="text-center" id="#header"><i class="fa-solid fa-people-group rotating"></i> ${value}</h1>`;
     data.results.forEach((item) => {
       output += `
-      
       <div class="col-4" id="cardElement">
       <div class="card p-3 m-3 " >
       <h6 class = "card-title text-center">${item.name}</h6>
+
       </div></div>
       `;
     });
   }
   if (value === "planets") {
-     header = `<h1 class="text-center" id="#header"><i class="fa-solid fa-earth-americas rotating"></i> ${value}</h1>`;
+    header = `<h1 class="text-center" id="#header"><i class="fa-solid fa-earth-americas rotating"></i> ${value}</h1>`;
     data.results.forEach((item) => {
       output += `
       <div class="col-4" id="cardElement">
@@ -67,7 +67,7 @@ function displayResults(data, value) {
     });
   }
   if (value === "starships") {
-     header = `<h1 class="text-center" id="#header"><i class="fa-solid fa-shuttle-space rotating"></i> ${value}</h1>`;
+    header = `<h1 class="text-center" id="#header"><i class="fa-solid fa-shuttle-space rotating"></i> ${value}</h1>`;
     data.results.forEach((item) => {
       output += `
       <div class="col-4" id="cardElement">
