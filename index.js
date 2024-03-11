@@ -85,6 +85,8 @@ const disableDarkMode = () => {
 
 if (darkMode === "enabled") {
   enableDarkMode();
+   lightenText.classList.add("unselected");
+   darkenText.classList.remove("unselected");
   toggleBtn.classList.add("toggled");
 }
 
@@ -95,7 +97,7 @@ toggleBtn.addEventListener("click", (event) => {
 
   if (toggleBtn.classList.contains("toggled")) {
     disableDarkMode();
-    
+
     toggleBtn.classList.remove("toggled");
     body.classList.remove("dark");
 
