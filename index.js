@@ -11,16 +11,21 @@ fetch(filmRequest)
   .then((data) => {
     let output = `<div class="row">`;
     let films = document.querySelector("#films");
+    
     console.log(data);
     data.result.forEach((item) => {
       output += `
-      <div class="col-4">
+      <div class="col-4" id="cardElement">
       <div class="card p-3 m-3 " >
-      <h6 class = "card-title text-center">${item.properties.title}</h6>
+      <h5 class = "card-title text-center"><strong>${item.properties.title}</strong></h5>
+      <br />
+      <p class= "card-title "><strong>Director:</strong> ${item.properties.director}</p>
+      <p class= "card-title "><strong>Producer:</strong> ${item.properties.producer}</p>
+      <p class= "card-title "><strong>Release date:</strong> ${item.properties.release_date}</p>
       </div></div>
       `;
     });
-    output = output + `</div>`;
+    output =  output + `</div>`;
     films.innerHTML = output;
   });
 
@@ -34,11 +39,14 @@ async function asyncFetch(value) {
 
 function displayResults(data, value) {
   let output = `<div class="row">`;
+  let header = document.querySelector("#header");
   console.log(data);
   if (value === "people") {
+   header = `<h1 class="text-center" id="#header"><i class="fa-solid fa-people-group"></i> ${value}</h1>`;
     data.results.forEach((item) => {
       output += `
-      <div class="col-4">
+      
+      <div class="col-4" id="cardElement">
       <div class="card p-3 m-3 " >
       <h6 class = "card-title text-center">${item.name}</h6>
       </div></div>
@@ -46,19 +54,23 @@ function displayResults(data, value) {
     });
   }
   if (value === "planets") {
+     header = `<h1 class="text-center" id="#header"><i class="fa-solid fa-earth-americas"></i> ${value}</h1>`;
     data.results.forEach((item) => {
       output += `
-      <div class="col-4">
+      <div class="col-4" id="cardElement">
       <div class="card p-3 m-3" >
       <h6 class = "card-title text-center">${item.name}</h6>
+
+
       </div></div>
       `;
     });
   }
   if (value === "starships") {
+     header = `<h1 class="text-center" id="#header"><i class="fa-solid fa-shuttle-space"></i> ${value}</h1>`;
     data.results.forEach((item) => {
       output += `
-      <div class="col-4  ">
+      <div class="col-4" id="cardElement">
       <div class="card p-3 m-3">
       <h6 class = "card-title text-center">${item.name}</h6>
       </div></div>
@@ -68,30 +80,32 @@ function displayResults(data, value) {
     });
   }
 
-  output = output + `</div>`;
+  output = header + output + `</div>`;
+
   results.innerHTML = output;
 }
 
-
 const enableDarkMode = () => {
   document.body.classList.add("dark");
+
   localStorage.setItem("darkMode", "enabled");
 };
 
 const disableDarkMode = () => {
   document.body.classList.remove("dark");
+
   localStorage.setItem("darkMode", null);
 };
 
 if (darkMode === "enabled") {
   enableDarkMode();
-   lightenText.classList.add("unselected");
-   darkenText.classList.remove("unselected");
+
+  lightenText.classList.add("unselected");
+  darkenText.classList.remove("unselected");
   toggleBtn.classList.add("toggled");
 }
 
-toggleBtn.addEventListener("click", (event) => {
-  event.preventDefault();
+toggleBtn.addEventListener("click", () => {
   let body = document.querySelector("body");
   darkMode = localStorage.getItem("darkMode");
 

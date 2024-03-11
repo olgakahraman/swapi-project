@@ -35,7 +35,9 @@ body {
 }
 .results h1 {
   color: indigo;
+ text-transform: capitalize;
 }
+
 .card {
   border-radius: 30px;
   transition: 150ms all ease-in-out;
@@ -120,4 +122,7 @@ footer a:hover {
 }
 .dark .results h1 {
   color: #ecfdf5;
+}
+#cardElement:hover{
+cursor:pointer;
 }
