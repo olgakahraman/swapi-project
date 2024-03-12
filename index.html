@@ -25,11 +25,39 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div class="first-flex">
-      <div class="star-wars-logo">
-        <a href="/" id="logo-img">
-          <img src="/images/logo.webp" alt="star wars logo" class="logo-img"
-        /></a>
+    <div class="first-flex d-flex justify-content-evenly">
+      <div class="d-flex">
+        <div class="social-links">
+          <a
+            href="https://www.instagram.com/starwars/"
+            target="_blank"
+            title="Instagram Profile"
+          >
+            <i class="fa-brands fa-instagram"></i
+          ></a>
+          <a
+            href="https://twitter.com/starwars"
+            target="_blank"
+            title="Instagram Profile"
+          >
+           <i class="fa-brands fa-x-twitter"></i></a>
+
+          <a
+            href="https://www.facebook.com/StarWars"
+            target="_blank"
+            title="Facebook Profile"
+          >
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="star-wars-logo">
+          <a href="/" id="logo-img">
+            <img src="/images/logo.webp" alt="star wars logo" class="logo-img"
+          /></a>
+        </div>
+        <div></div>
       </div>
       <div>
         <div class="day-night-btn">
@@ -45,7 +73,6 @@
         </div>
       </div>
     </div>
-
     <div class="container">
       <ul
         class="nav nav-pills nav-fill gap-2 p-1 small bg-secondary rounded-5 shadow-sm"
@@ -59,7 +86,7 @@
       >
         <li class="nav-item" role="presentation">
           <button
-            class="nav-link  rounded-5"
+            class="nav-link rounded-5"
             id="people-tab2"
             data-bs-toggle="tab"
             type="button"
@@ -96,8 +123,9 @@
       </ul>
       <div class="row">
         <div id="results" class="results">
-          
-          <h1 id="header" class="text-center" ><i class="fa-solid fa-film rotating"></i> Films</h1>
+          <h1 id="header" class="text-center">
+            <i class="fa-solid fa-film rotating"></i> Films
+          </h1>
           <div id="films" class="films"></div>
         </div>
       </div>
@@ -105,9 +133,9 @@
 
     <footer>
       This project was coded by
-      <strong>Olga Kahraman</strong> and
+      <strong>Olga Dietiuk Kahraman</strong> and
       <a href="https://github.com/olgakahraman/swapi-project" target="_blank"
-        >open-sourced on GitHub</a
+        ><strong>open-sourced on GitHub</strong></a
       >
     </footer>
 

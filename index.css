@@ -6,10 +6,18 @@ body {
   background-color: aqua;
   font-family: "Montserrat", sans-serif;
 }
-.first-flex {
-  display: flex;
-  justify-content: space-evenly;
+.social-links {
+margin-top:25px;
 }
+.social-links a{
+  color:indigo;
+padding:10px 2px;
+font-size: 26px;
+border-radius: 25px;
+transition: all 100ms ease-in-out;
+
+}
+
 .star-wars-logo {
   margin-top: 25px;
 }
@@ -19,7 +27,11 @@ body {
 .logo-img:hover {
   cursor: pointer;
 }
-
+.loading {
+  color: indigo;
+  display: block;
+  text-align: center;
+}
 .container {
   margin: 30px auto;
   display: block;
@@ -35,7 +47,7 @@ body {
 }
 .results h1 {
   color: indigo;
- text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 .card {
@@ -98,7 +110,7 @@ body.dark {
 }
 /* footer */
 footer {
-  margin: 100px auto ;
+  margin: 100px auto;
   color: indigo;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.5);
@@ -123,21 +135,37 @@ footer a:hover {
 .dark .results h1 {
   color: #ecfdf5;
 }
-#cardElement:hover{
-cursor:pointer;
+.dark .loading{
+  color:#ecfdf5;
 }
+#cardElement:hover {
+  cursor: pointer;
+}
+.dark .social-links a{
+color:#f7c133;
+}
+.dark .toggle-btn{
+  background-color:#f7c133;
 
+}
+.dark .toggle-text{
+  color:#f7c133;
+}
+.dark .toggle-btn.toggled > .inner-circle{
+  background-color:#313131;
+}
 /* rotating animation for header icons */
 @keyframes rotating {
-    from {
-        transform: rotate(0deg)
-    }
+  from {
+    transform: rotate(0deg);
+  }
 
-    to {
-        transform: rotate(360deg)
-    }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .rotating {
-    animation: rotating 10s linear infinite;
+  animation: rotating 10s linear infinite;
 }
+
