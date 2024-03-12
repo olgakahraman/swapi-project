@@ -1,26 +1,24 @@
 const results = document.querySelector("#results");
 let darkMode = localStorage.getItem("darkMode");
 const toggleBtn = document.querySelector("#toggleBtn");
-const filmRequest = "https:swapi.tech/api/films/";
+let filmRequest = "https:swapi.tech/api/films/";
 
 function loading() {
-  results.innerHTML = '<i class="loading fas fa-circle-notch fa-spin fa-sw"></i>';
+  results.innerHTML =
+    '<i class="loading fas fa-circle-notch fa-spin fa-sw"></i>';
 }
 
 //  we will grub the filmsrequest and retrieve the data and dsplay films
 fetch(filmRequest)
-
   .then((response) => {
     return response.json();
-   
   })
   .then((data) => {
     let output = `<div class="row">`;
     let films = document.querySelector("#films");
-   
+
     console.log(data);
     data.result.forEach((item) => {
-     
       output += `
       <div class="col-md-4" id="cardElement">
       <div class="card p-3 m-3 " >
@@ -32,10 +30,9 @@ fetch(filmRequest)
       </div></div>
       `;
     });
-    
+
     output = output + `</div>`;
     films.innerHTML = output;
-    
   });
 
 // we will grub the link to retrieve the data and display information depening on value
