@@ -9,7 +9,8 @@ function loading() {
 }
 
 //  we will grub the filmsrequest and retrieve the data and dsplay films
-fetch(filmRequest)
+function fetchFilms(){
+  fetch(filmRequest)
   .then((response) => {
     return response.json();
   })
@@ -34,6 +35,8 @@ fetch(filmRequest)
     output = output + `</div>`;
     films.innerHTML = output;
   });
+}
+fetchFilms();
 
 // we will grub the link to retrieve the data and display information depening on value
 async function asyncFetch(value) {
