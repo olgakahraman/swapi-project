@@ -1,7 +1,7 @@
 const results = document.querySelector("#results");
 let darkMode = localStorage.getItem("darkMode");
 const toggleBtn = document.querySelector("#toggleBtn");
-const filmRequest = "https:swapi.tech/api/films/";
+const filmRequest = "https:www.swapi.tech/api/films/";
 
 function loading() {
   results.innerHTML =
@@ -10,12 +10,37 @@ function loading() {
 
 //  we will grub the filmsrequest and retrieve the data and dsplay films
 
+  fetch(filmRequest)
   
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    let output = `<div class="row">`;
+    let films = document.querySelector("#films");
+
+    console.log(data);
+    data.result.forEach((item) => {
+      output += `
+      <div class="col-md-4" id="cardElement">
+      <div class="card p-3 m-3 " >
+      <h5 class = "card-title text-center"><strong>${item.properties.title}</strong></h5>
+      <br />
+      <p class= "card-title "><strong>Director:</strong> ${item.properties.director}</p>
+      <p class= "card-title "><strong>Producer:</strong> ${item.properties.producer}</p>
+      <p class= "card-title "><strong>Release date:</strong> ${item.properties.release_date}</p>
+      </div></div>
+      `;
+    });
+
+    output = output + `</div>`;
+    films.innerHTML = output;
+  });
 
 
 // we will grub the link to retrieve the data and display information depening on value
 async function asyncFetch(value) {
-  const res = await fetch(`https:swapi.tech/api/${value}/`);
+  const res = await fetch(`https:www.swapi.tech/api/${value}/`);
   const data = await res.json();
 
   displayResults(data, value);
