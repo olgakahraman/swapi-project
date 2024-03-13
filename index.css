@@ -17,7 +17,13 @@ border-radius: 25px;
 transition: all 100ms ease-in-out;
 
 }
-
+.social-links a:hover{
+  transform:scale(2);
+  color:#f7c133;
+}
+.dark .social-links a:hover{
+  color:indigo;
+}
 .star-wars-logo {
   margin-top: 25px;
 }
@@ -56,6 +62,7 @@ transition: all 100ms ease-in-out;
 }
 .card:hover {
   background: #f7c133;
+  transform:scale(1.1);
 }
 
 .card-title {
