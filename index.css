@@ -1,5 +1,5 @@
 body {
-  background-image: url("/images/day2.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url("/images/day2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   transition: all 150ms ease-in-out;
