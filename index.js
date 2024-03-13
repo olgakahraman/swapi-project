@@ -1,7 +1,7 @@
 const results = document.querySelector("#results");
 let darkMode = localStorage.getItem("darkMode");
 const toggleBtn = document.querySelector("#toggleBtn");
-const filmRequest = "https:www.swapi.tech/api/films/";
+const filmRequest = "https://www.swapi.tech/api/films/";
 
 function loading() {
   results.innerHTML =
@@ -40,7 +40,7 @@ function loading() {
 
 // we will grub the link to retrieve the data and display information depening on value
 async function asyncFetch(value) {
-  const res = await fetch(`https:www.swapi.tech/api/${value}/`);
+  const res = await fetch(`https://www.swapi.tech/api/${value}/`);
   const data = await res.json();
 
   displayResults(data, value);
